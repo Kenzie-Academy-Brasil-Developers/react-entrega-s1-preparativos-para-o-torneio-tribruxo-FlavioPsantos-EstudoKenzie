@@ -1,0 +1,76 @@
+.app{
+  background-image: url("../Students/assets/1024x600.jpg");  
+}
+h1{
+  font-size:40px;
+  line-height: 2px;
+  font-weight: normal;
+}
+p{
+    font-variant: unset;
+    font-weight: lighter;
+    width: 300px;
+    text-align: center;
+    display: flex;
+    font-size: 20px;
+    text-transform:uppercase;
+    line-height: 30px;
+}
+button{
+    width: 300px;
+    border-radius: 7px;
+    border:none;
+    height: 30px;
+    background-color: rgba(233, 196, 106);
+    cursor: pointer;
+}
+.container{
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+}
+.cardBruxo{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 16px;
+  line-height: 30px;
+  cursor: pointer;
+}
+.cardBruxo:hover{
+  animation:  loop infinite 10s linear;
+}
+@keyframes loop {
+  from {
+    transform:  rotate(0deg);
+  }
+  to {
+    transform: rotate(30deg);
+  }
+}
+
+label{
+  flex-direction: column;
+  display: flex;
+}
+
+
+img{
+  border-radius: 50px;
+  height: 200px;
+  flex-basis: 1;
+  height: 200px;
+  flex-shrink: 1;
+  box-sizing: border-box;
+  object-fit: contain;
+ 
+}
+.bruxos{
+    padding: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
