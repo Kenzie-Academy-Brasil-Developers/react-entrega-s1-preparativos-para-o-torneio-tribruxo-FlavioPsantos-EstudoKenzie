@@ -8,7 +8,7 @@ class App extends Component {
     students: [],
   }
   componentDidMount() {
-    fetch("http://hp-api.herokuapp.com/api/characters/students")
+    fetch("https://hp-api.herokuapp.com/api/characters/students")
       .then(response => {
         return response.json()
       })
