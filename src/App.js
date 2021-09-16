@@ -15,14 +15,6 @@ class App extends Component {
       .then(response => this.setState({ students: response}))
       .catch((error) => console.log(error))
   }
-  // componentDidUpdate() {
-  //   fetch("http://hp-api.herokuapp.com/api/characters/students")
-  //     .then(response => {
-  //       return response.json()
-  //     })
-  //     .then(response => this.setState({ students: response}))
-  //     .catch((error) => console.log(error))
-  // }
   render() {
     const { students } = this.state;
     return (

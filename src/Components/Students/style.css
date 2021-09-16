@@ -42,6 +42,7 @@ border: 2px solid orangered;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
 
 }
 .Gryffindor, .Hufflepuff, .Ravenclaw, .Slytherin{
@@ -54,6 +55,7 @@ border: 2px solid orangered;
   font-size: 16px;
   line-height: 30px;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 .cardBruxo:hover{
   animation:  loop infinite 10s linear;
@@ -89,4 +91,5 @@ img{
     align-items: center;
     justify-content: space-evenly;
     width: 50%;
+    flex-wrap: wrap;
 }
