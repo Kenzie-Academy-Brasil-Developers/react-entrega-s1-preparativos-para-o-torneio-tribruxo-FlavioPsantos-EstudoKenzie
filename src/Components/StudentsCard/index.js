@@ -9,7 +9,8 @@ function StudentsCard({ students}) {
             {
                     students.map((item, index) => 
                        
-                        <div key={index} className='cardBruxo'> 
+                        <div key={index} className={item.house}> 
+                        
                         <img src={item.image} alt={item.name}/>
                         <label>{item.name}</label>
                         <label>{item.house}</label>

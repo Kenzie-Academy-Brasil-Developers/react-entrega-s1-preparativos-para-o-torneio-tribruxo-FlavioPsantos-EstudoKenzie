@@ -14,9 +14,8 @@
 }
 
 .App-header {
-  background-image: url("./Components/Students/assets/1024x600.jpg");
-  background-repeat: round;
-  object-fit: cover;
+  background-image: url("./Components/Students/assets/1920x1080.png");
+  object-fit: contain;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

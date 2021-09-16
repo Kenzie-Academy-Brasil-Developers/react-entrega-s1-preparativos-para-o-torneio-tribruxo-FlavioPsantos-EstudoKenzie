@@ -29,7 +29,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
         
-         <Students students={students} update={this.componentDidUpdate}/>
+         <Students students={students}/>
         </header>
       </div>
     );

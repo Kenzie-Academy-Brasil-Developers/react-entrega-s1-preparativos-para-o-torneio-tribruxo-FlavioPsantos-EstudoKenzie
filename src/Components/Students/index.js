@@ -1,39 +1,34 @@
 import { useState } from "react";
 import StudentsCard from "../StudentsCard";
 import './style.css'
-function Students({ students, update }) {
-    const [useHandle, setHandle] = useState(true)
-    const [studentUse, setStudent] = useState([])
-
-    const generateStudenId = () => {
-        return Math.floor(Math.random() * students.length)
-    }
+function Students({ students }) {
+    const [studentUse, setStudentUse] = useState([])
+    const [random, setRandomNumber] = useState(0)
+    const [handleClick, setHandleClick] = useState(true)
 
     const takeStudent = () => {
-        for (let i = studentUse.length; i <= 3; i++) {
-            const finded = students.find((item, index) => index === generateStudenId())
-            filter(finded)
-            if (finded !== undefined) {
-                setStudent([...studentUse, finded])
+        let student = [...students]
+        let arr = [];
+        for (let i = 0; i < 3; i++) {
+            setRandomNumber(Math.floor(Math.random() * student.length))
+            let finded = student[random]
+            if(finded === undefined){
+               finded = student[1]
             }
+            student = student.filter(item => item.name !== finded.name)
+            student = student.filter(item => item.house !== finded.house)
+            arr.push(finded)
+
         }
-    }
-    const filter = (finded)=>{
-    studentUse.filter(function (elem, i, arr) {
-        return arr.indexOf(elem === finded);
-
-    });
-    }
-    const updateStudent = ()=>{
-        window.location.reload();
-    }
-    if(studentUse.length !== 3){
-    takeStudent()
+        setStudentUse(arr)
     }
 
-    const handleClick = () => {
-        setHandle(!useHandle)
+
+    const handle = ()=>{
+        setHandleClick(!handleClick)
+        takeStudent()
     }
+   
 
     return (
         <>
@@ -43,15 +38,16 @@ function Students({ students, update }) {
 
             </div>
             <div className="container">
-                {useHandle ? false : <StudentsCard students={studentUse} />}
+                <StudentsCard students={studentUse}/>
             </div>
-            {useHandle ? 
-             <button onClick={handleClick}>Começar!</button>: 
-             <button onClick={updateStudent}>Tentar Novamente!</button>}
+                {handleClick ? 
+                <button onClick={handle}>Começar</button> :
+                <button onClick={takeStudent}>Tentar Novamente</button>}
                
 
         </>
     )
 }
+
 
 export default Students;

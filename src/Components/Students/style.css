@@ -1,5 +1,5 @@
 .app{
-  background-image: url("../Students/assets/1024x600.jpg");  
+  background-image: url("../Students/assets/1920x1080.png");  
 }
 h1{
   font-size:40px;
@@ -24,6 +24,19 @@ button{
     background-color: rgba(233, 196, 106);
     cursor: pointer;
 }
+.Gryffindor>img{
+border: 2px solid orangered;
+
+}
+.Hufflepuff>img{
+  border: 2px solid yellow
+}
+.Ravenclaw>img{
+  border: 2px solid blue
+}
+.Slytherin>img{
+  border: 2px solid green
+}
 .container{
   width: 80%;
   display: flex;
@@ -31,7 +44,10 @@ button{
   justify-content: space-around;
 
 }
-.cardBruxo{
+.Gryffindor, .Hufflepuff, .Ravenclaw, .Slytherin{
+  border: 1px solid brown;
+  padding: 10px;
+  border-radius: 50px;
   display: flex;
   flex-direction: column;
   text-align: center;
